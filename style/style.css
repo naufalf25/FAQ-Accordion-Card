@@ -1,0 +1,203 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-verydarkgrayishblue: hsl(237, 12%, 33%);
+    --color-darkgrayishblue: hsl(240, 6%, 50%);
+    --color-lightgrayishblue: hsl(240, 5%, 91%);
+    --color-orange: orange;
+}
+
+body {  
+    font-family: 'Kumbh Sans', sans-serif;
+    background: linear-gradient(180deg, #af68ea, #6563e8);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 96.5vh;
+    padding: 10rem 1.5rem;
+}
+
+.card {
+    background-color: #FFF;
+    padding: 2rem;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.head-img {
+    position: relative;
+    margin-top: -8.8rem;
+}
+
+.desktop-img {
+    display: none;
+}
+
+.mobile-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+img.mobile, img.pattern-mobile {
+    width: 240px;
+}
+
+img.pattern-mobile {
+    margin-top: -4.5rem;
+}
+
+.faq-container {
+    padding: 2rem 0;
+    font-size: 14px;
+}
+
+.faq-title {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.faq-content {
+    margin-top: 2rem;
+    font-size: 10px;
+}
+
+.faq-head {
+    margin-top: 1rem;
+    font-weight: 300;
+    color: var(--color-verydarkgrayishblue);
+    cursor: pointer;
+}
+
+.faq-head::after {
+    content: url(../images/icon-arrow-down.svg);
+    font-size: 10px;
+    float: right;
+    margin-left: 2rem;
+    transition: 0.6s;
+}
+
+p.faq-body {
+    margin-top: 0.5rem;
+    color: var(--color-darkgrayishblue);
+    padding-right: 3rem;
+    font-weight: 400;
+    display: none;
+}
+
+.hr-line {
+    margin-top: 1rem;
+    border-bottom: 1px solid var(--color-lightgrayishblue);
+}
+
+.active {
+    font-weight: 700;
+}
+
+.active::after {
+    content: url(../images/icon-arrow-down.svg);
+    font-size: 10px;
+    transform: rotate(180deg);
+}
+
+@media (min-width: 1000px) {
+    .container {
+        padding: 5rem 6rem;
+    }
+
+    .card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: url(../images/illustration-woman-online-desktop.svg) -4.5rem center no-repeat ,url(../images/bg-pattern-desktop.svg) -29.5rem -15rem no-repeat, #FFF;
+        background-size: 400px, 800px;
+    }
+
+    .mobile-img {
+        display: none;
+    }
+
+    .desktop-img {
+        display: block;
+    }
+
+    img.box-desktop {
+        width: 150px;
+        margin: 14rem 0 0 -6.5rem;
+    }
+
+    .faq-container {
+        margin-left: 20rem;
+        padding: 2.5rem 4.5rem;
+    }
+
+    .faq-title {
+        text-align: left;
+        font-size: 30px;
+    }
+
+    .faq-head:hover {
+        color: #eb9073;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        padding: 5rem 8rem;
+    }
+
+    .faq-container {
+        margin-left: 16.3rem;
+    }
+}
+
+@media (min-width: 1366px) {
+    .container {
+        padding: 5rem 18rem;
+    }
+
+    .faq-container {
+        margin-left: 16.2rem;
+    }
+
+    .faq-head::after {
+        margin-left: 3.6rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        padding: 5rem 20rem;
+    }
+
+    .faq-container {
+        margin-left: 16rem;
+    }
+
+    .faq-head::after {
+        margin-left: 4.4rem;
+    }
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    padding-bottom: 10px;
+    color: var(--color-lightgrayishblue); 
+}
+
+.attribution a { 
+    color: var(--color-lightgrayishblue);
+    font-weight: 500;
+}
